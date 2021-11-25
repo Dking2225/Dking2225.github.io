@@ -1,0 +1,92 @@
+.about{
+    @include breakpoint-up (large){
+        display: flex;
+    }
+    &__image{
+        background-image: url('/Portfolio2021/portfolio_images/about.png');
+        min-height: 370px;
+        /* Center and scale the image nicely */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 89%;
+        
+        /* Needed to posit ion the navbar */
+        position: relative;
+        margin-bottom: 30px;
+
+        @include breakpoint-up(large){
+            background-image: url('/Portfolio2021/portfolio_images/about.png');
+            flex: 1;
+            min-height: 551px;
+            background-position: center center;
+            background-size: 100%;
+            margin-bottom: 0px;
+            margin-left: 103px;
+        }
+
+        @include breakpoint-up(xlarge){
+            background-size: 75%;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__text{
+        flex: 1;
+        margin: auto;
+        text-align: center;
+        padding-left: 23px;
+        padding-right: 23px;
+
+        @include breakpoint-up(large){
+            min-height: 340px;
+            padding-right:50px;
+            padding-left: 100px; 
+        }
+
+        @include breakpoint-up(xlarge){
+            min-height: 340px;
+            padding-right:170px;
+            padding-left: 129px; 
+        }
+
+
+        h4{
+            margin: 0;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: $black;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 72px;
+            padding-bottom: 20px;
+
+            @include breakpoint-up (large){
+                text-align: left;
+            }
+            
+        }
+
+        p{
+            margin: 0px;
+            text-align: left;
+            font-family: 'Nunito', sans-serif;
+            color: $lightGray;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            padding-bottom: 20px;
+            
+        }
+    }
+
+    &__buttons-container{
+        margin: auto;
+        text-align: center;
+        padding-bottom: 50px;
+
+        @include breakpoint-up(large){
+            text-align: left;
+        }
+        
+    }
+}

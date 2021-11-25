@@ -1,0 +1,122 @@
+.projects{
+    padding-top: 70px;
+    h4{
+        margin: 0;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: $black;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 72px;
+            padding-top: 24px;
+            padding-bottom: 0px;
+    }
+    &__container{
+        margin: auto;
+        text-align: center;
+        padding-left: 23px;
+        padding-right: 23px;
+
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+
+       
+    }
+    &__text{
+        h5{
+            margin: 0px;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            color: $black;
+            font-size: 37px;
+            font-weight: 700;
+            line-height: 60px;
+            padding-bottom: 25px;
+            padding-top: 25px;
+        }
+        p{
+            margin: 0px;
+            text-align: left;
+            font-family: 'Nunito', sans-serif;
+            color: $lightGray;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__button-container{
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    &__button{
+        background-color: $white;
+        border-radius: 24px;
+        border: 2px solid $black;
+        color: $black;
+        padding: 8px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin-right:12px;
+        cursor: pointer; 
+        font-family: 'Roboto', sans-serif;
+        transition-duration: 0.4s;
+
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &__vid{
+        iframe{
+            display: block;
+            margin: auto;
+            width: 90%;
+            height: 430px;
+            border-radius: 25px;
+            border-style: none;
+        }
+        @include breakpoint-up (large){
+            flex: 1;
+            margin: auto;
+            iframe{
+                width: 100%;
+            }
+        }
+
+    }
+
+    span{
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 4px;
+        background-color: $blue;
+        margin-bottom: 35px;
+    }
+
+    &__flex-container{
+        @include breakpoint-up(large){
+            display: flex;
+            padding: 0px 40px;
+            min-height: 524px;
+        }
+        
+        @include breakpoint-up(xlarge){
+            display: flex;
+            padding-right: 85px;
+            padding-left: 75px;
+            min-height: 524px;
+        }
+
+
+    }
+
+    
+}

@@ -1,0 +1,248 @@
+.header{
+    position: relative;
+    z-index: 1;
+    &.open {
+
+        .header__toggle {
+          > span:first-child {
+            transform: rotate(45deg);
+          }
+          
+          > span:nth-child(2) {
+            opacity: 0;
+          }
+          
+          > span:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .overlay {
+        z-index: 2;
+        opacity: 0;
+        position: fixed;
+        top: 40px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-image: linear-gradient($black, transparent);
+      }
+    
+    &__image{
+        background-image: url('/Portfolio2021/portfolio_images/mobile_header.png');
+        min-height: 37.56rem;
+        /* Center and scale the image nicely */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* Needed to posit ion the navbar */
+        position: relative;
+        
+        
+        @include breakpoint-up(large){ 
+            background-image: url('/Portfolio2021/portfolio_images/header.png');
+            height: 47.18rem;
+            top: -5px;
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-size: 83%;
+            position: relative;
+          }
+        // @include breakpoint-up(xlarge){ 
+        //     background-image: url('/portfolio_images/header.png');
+        //     min-height: 625px;
+        //     top: -5px;
+        //     /* Center and scale the image nicely */
+        //     background-position: center center;
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+            
+        //     /* Needed to posit ion the navbar */
+        //     position: relative;
+        //   }
+    }
+
+    &__text{
+        margin: auto;
+        padding-left: 23px;
+        padding-right: 23px;
+
+       
+        @include breakpoint-up(medium){
+            margin: 0px;
+            width: 70%;
+            padding-left: 110px;
+            padding-top: 52px;
+            padding-right: 23px;
+        }
+        @include breakpoint-up(large){
+            margin: 0px;
+            width: 50%;
+            padding-left: 110px;
+            padding-top: 52px;
+            padding-right: 23px;
+        }
+        
+        h4{
+            margin: 0px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            color: $blue;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 20px;
+
+            
+        }
+
+        h1{
+            margin: 0px;
+            font-family: 'Playfair Display', serif;
+            color: $black;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            padding-bottom: 20px;
+
+            @include breakpoint-up(large){
+                font-size: 64px;
+                line-height: 78px;  
+              }
+        }
+
+        p{
+            margin: 0px;
+            font-family: 'Nunito', sans-serif;
+            color: $lightGray;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            padding-bottom: 40px;
+        }
+        
+    }
+
+    &__buttons-container{
+        margin-bottom: 60px;
+        div{
+            margin: auto;
+            text-align: center;
+        }
+
+        @include breakpoint-up(large){
+            margin-bottom: 0px;
+            div{
+            display: inline;
+            text-align: left;
+            margin-left: 113px;
+            }
+
+            div.whtbtn{
+                margin-left: 0px;
+            }
+
+        }
+        
+    }
+    nav{
+        padding: 12px;
+        z-index: 3;
+
+        @include breakpoint-up(large){
+            padding-right: 7.1875rem;
+            padding-left: 7.1875rem;
+        }
+    }
+    
+    &__logo{
+        font-size: $font-sm;
+        transition-duration: 0.5s;
+
+        &:hover{
+            font-size: $font-logo;
+            color: $white;
+        }
+
+        @include breakpoint-up(large){
+           &:hover{
+                font-size: $font-logo;
+                color: $blue;
+            } 
+        }
+        
+    }
+
+    
+
+    &__links{
+
+        a{
+            position: relative;
+            font-size: $font-sm;
+            color: $black;
+            transition: color 200ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 2.687rem;
+            }
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                background: #016c99;
+                left: 0;
+                right:0;
+                bottom: -15px;
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+            }
+
+            &:hover{
+                color: $black;
+
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__toggle { // Mobile Menu Toggle
+
+        > span {
+          display: block;
+          width: 32px;
+          height: 2px;
+          background-color: $black;
+          transition: all 300ms ease-in-out;
+          transform-origin: 2px 1px;
+    
+          &:not(:last-child){
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+    &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #E5F7FF;
+    margin-top: 6.5rem;
+    padding: 1.625rem;
+    border-radius: 5px;
+    z-index: 2;
+
+    a {
+        display: block;
+        padding: 0.625rem;
+        color: $black;
+        text-align: center;
+    }
+    }
+}

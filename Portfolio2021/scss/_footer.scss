@@ -1,0 +1,51 @@
+.footer{
+
+    &__socials{
+        margin: auto;
+        padding-top:5.375rem;
+        text-align: center;
+        @include breakpoint-up(large){
+            padding-top: 5.375rem;
+        }
+        a{
+            
+            &:not(:last-child){
+                margin-right: 1.2rem;
+            }
+
+           
+        }
+    }
+
+    &__image{
+        background-image: url('/Portfolio2021/portfolio_images/footer.png');
+        min-height: 92px;
+        /* Center and scale the image nicely */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* Needed to posit ion the navbar */
+        position: relative;
+        margin-top: 27px;
+
+        @include breakpoint-up(large){
+            min-height: 344px;
+            margin-top: 0px;
+
+        }
+    }
+
+    &__copyright{
+        margin: auto;
+        p{
+            margin: 0px;
+            margin-top: 5px;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            color: $lightGray;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+}
